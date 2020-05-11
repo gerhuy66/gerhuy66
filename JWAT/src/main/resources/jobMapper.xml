@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Job">
+	<resultMap id="result" type="vn.com.cyberlogitec.practice3.Job">
+		<result property="jobID" column="JOB_ID" />
+		<result property="jobTitle" column="JOB_TITLE" />
+		<result property="minSalary" column="MIN_SALARY" />
+		<result property="maxSalary" column="MAX_SALARY" />
+	</resultMap>
+
+	<select id="getAll" resultMap="result">
+		SELECT * FROM JOB;
+	</select>
+
+</mapper> 
